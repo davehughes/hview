@@ -1,4 +1,20 @@
 class Tree(object):
+
+    @classmethod
+    def build(cls, items, adapter):
+        adapter_inst = adapter()
+        root = cls(adapter_inst.root_name)
+        for item in items:
+            hierarchy = adapter_inst.hierarchy(item)
+            item_node = {
+                'original': item,
+                'hierarchy': hierarchy,
+                'value': adapter_inst.value(item),
+                'name': adapter_inst.label(item),
+            }
+            root.insert_item(hierarchy, item_node)
+        return root.list_transformed()
+
     def __init__(self, name):
         self.name = name
         self.child_map = {}
@@ -24,9 +40,25 @@ class Tree(object):
             'children': [v.list_transformed() for k, v in self.child_map.items()]
         }
 
+
 class Leaf(object):
     def __init__(self, item):
         self.item = item
 
     def list_transformed(self):
         return self.item
+
+
+class ItemAdapter(object):
+    root_name = 'root'
+    label_key = 'name'
+    value_key = 'value'
+
+    def label(self, item):
+        return item[self.label_key]
+
+    def value(self, item):
+        return item[self.value_key]
+
+    def hierarchy(self, item):
+        return [self.label(item)]

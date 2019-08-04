@@ -7,7 +7,7 @@ from hview import tree
 
 def generate_wc_tree(filespec):
     line_counts = wc_count_lines(root=filespec.root, files=filespec.files)
-    return build_file_tree(line_counts)
+    return tree.Tree.build(line_counts, adapter=WCLineCount)
 
 
 def wc_count_lines(root, files):
@@ -32,14 +32,23 @@ def wc_count_lines(root, files):
         }
 
 
-def build_file_tree(line_counts, metric='lines'):
-    root = tree.Tree('root')
-    for rec in line_counts:
-        hierarchy = rec['file'].split(os.sep)
-        item = {
-            'file': rec['file'],
-            'value': rec[metric],
-            'name': os.path.basename(rec['file']),
-        }
-        root.insert_item(hierarchy, item)
-    return root.list_transformed()
+class WCLineCount(tree.ItemAdapter):
+    value_key = 'lines'
+
+    def label(self, item):
+        return os.path.basename(item['file'])
+
+    def hierarchy(self, item):
+        return item['file'].split(os.sep)
+
+
+class WCLineCountFileExt(tree.ItemAdapter):
+    value_key = 'lines'
+
+    def label(self, item):
+        return os.path.basename(item['file'])
+
+    def hierarchy(self, item):
+        splits = item['file'].split(os.sep)
+        _, extension = os.path.splitext(item['file'])
+        return [extension] + splits
