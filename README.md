@@ -11,8 +11,8 @@ git clone https://github.com/davehughes/hview
 cd hview
 virtualenv env
 source env/bin/activate
-pip install -r requirements.txt
+pip install git+https://github.com/davehughes/hview
 
-python -m hview.cli generate-wc --root . > hierarchy.json
-python -m hview.cli serve --data hierarchy.json
+hview generate-wc --root . > hierarchy.json
+hview serve --data hierarchy.json
 ```

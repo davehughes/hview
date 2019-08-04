@@ -2,12 +2,9 @@ import argparse
 import json
 import os
 import sys
-import shutil
-import SimpleHTTPServer
-import SocketServer
-import tempfile
 
 import hview.wc
+import hview.web
 import hview.files
 
 
@@ -82,20 +79,8 @@ def cmd_serve(args):
     if not os.path.isfile(args.data):
         print("Invalid data file, exiting...")
         return
+    return hview.web.serve_from_tempdir(args.data, bind=args.bind, port=args.port)
 
-    # Copy data and HTML page to tempfile and serve from there
-    tempdir = tempfile.mkdtemp()
-    try:
-        shutil.copyfile(args.data, os.path.join(tempdir, 'data.json'))
-        shutil.copyfile('index.html', os.path.join(tempdir, 'index.html'))
-        os.chdir(tempdir)
-
-        Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
-        httpd = SocketServer.TCPServer((args.bind, args.port), Handler)
-        print("serving at port: {}".format(args.port))
-        httpd.serve_forever()
-    finally:
-        shutil.rmtree(tempdir)
 
 
 def main(raw_args=None):
