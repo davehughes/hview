@@ -1,0 +1,27 @@
+<html>
+  <head>
+	<script src="https://unpkg.com/d3"></script>
+	<script src="https://unpkg.com/sunburst-chart"></script>
+  </head>
+
+  <body>
+	<div id="chart"></div>
+	<script>
+	  const color = d3.scaleOrdinal(d3.schemePaired);
+	  fetch('data.json')
+		.then(x => x.json())
+		.then(data => {
+		  var chart = Sunburst()
+			.data(data)
+			.label('name')
+			.size('value')
+			.color((d, parent) => color(parent ? parent.data.name : null))
+			.tooltipContent((d, node) => `Value: <i>${node.value}</i>`)
+			(document.getElementById("chart"))
+		})
+		.catch(e => {
+		  console.log("Error: " + e);
+		});
+	</script>
+  </body>
+</html>

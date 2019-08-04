@@ -1,0 +1,290 @@
+{
+  "name": "root",
+  "children": [
+    {
+      "value": "27",
+      "file": "index.html",
+      "name": "index.html"
+    },
+    {
+      "value": "1",
+      "file": "requirements.txt",
+      "name": "requirements.txt"
+    },
+    {
+      "value": "2",
+      "file": ".gitignore",
+      "name": ".gitignore"
+    },
+    {
+      "name": "hview",
+      "children": [
+        {
+          "value": "32",
+          "file": "hview/tree.py",
+          "name": "tree.py"
+        },
+        {
+          "value": "45",
+          "file": "hview/wc.py",
+          "name": "wc.py"
+        },
+        {
+          "value": "59",
+          "file": "hview/files.py",
+          "name": "files.py"
+        },
+        {
+          "value": "109",
+          "file": "hview/cli.py",
+          "name": "cli.py"
+        },
+        {
+          "value": "0",
+          "file": "hview/__init__.py",
+          "name": "__init__.py"
+        }
+      ]
+    },
+    {
+      "name": ".git",
+      "children": [
+        {
+          "name": "info",
+          "children": [
+            {
+              "value": "6",
+              "file": ".git/info/exclude",
+              "name": "exclude"
+            }
+          ]
+        },
+        {
+          "value": "4",
+          "file": ".git/index",
+          "name": "index"
+        },
+        {
+          "value": "1",
+          "file": ".git/HEAD",
+          "name": "HEAD"
+        },
+        {
+          "value": "1",
+          "file": ".git/description",
+          "name": "description"
+        },
+        {
+          "name": "hooks",
+          "children": [
+            {
+              "value": "169",
+              "file": ".git/hooks/pre-rebase.sample",
+              "name": "pre-rebase.sample"
+            },
+            {
+              "value": "8",
+              "file": ".git/hooks/post-update.sample",
+              "name": "post-update.sample"
+            },
+            {
+              "value": "42",
+              "file": ".git/hooks/prepare-commit-msg.sample",
+              "name": "prepare-commit-msg.sample"
+            },
+            {
+              "value": "24",
+              "file": ".git/hooks/pre-receive.sample",
+              "name": "pre-receive.sample"
+            },
+            {
+              "value": "128",
+              "file": ".git/hooks/update.sample",
+              "name": "update.sample"
+            },
+            {
+              "value": "15",
+              "file": ".git/hooks/applypatch-msg.sample",
+              "name": "applypatch-msg.sample"
+            },
+            {
+              "value": "14",
+              "file": ".git/hooks/pre-applypatch.sample",
+              "name": "pre-applypatch.sample"
+            },
+            {
+              "value": "24",
+              "file": ".git/hooks/commit-msg.sample",
+              "name": "commit-msg.sample"
+            },
+            {
+              "value": "53",
+              "file": ".git/hooks/pre-push.sample",
+              "name": "pre-push.sample"
+            },
+            {
+              "value": "49",
+              "file": ".git/hooks/pre-commit.sample",
+              "name": "pre-commit.sample"
+            },
+            {
+              "value": "114",
+              "file": ".git/hooks/fsmonitor-watchman.sample",
+              "name": "fsmonitor-watchman.sample"
+            }
+          ]
+        },
+        {
+          "name": "objects",
+          "children": [
+            {
+              "name": "e6",
+              "children": [
+                {
+                  "value": "0",
+                  "file": ".git/objects/e6/9de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+                  "name": "9de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+                }
+              ]
+            },
+            {
+              "name": "59",
+              "children": [
+                {
+                  "value": "1",
+                  "file": ".git/objects/59/51df3d789d9b89cd614ccf4fd751b9d5daa2c1",
+                  "name": "51df3d789d9b89cd614ccf4fd751b9d5daa2c1"
+                }
+              ]
+            },
+            {
+              "name": "04",
+              "children": [
+                {
+                  "value": "1",
+                  "file": ".git/objects/04/1e9d574edc152d1b8d1020c3db72f8622d2ad9",
+                  "name": "1e9d574edc152d1b8d1020c3db72f8622d2ad9"
+                }
+              ]
+            },
+            {
+              "name": "dc",
+              "children": [
+                {
+                  "value": "4",
+                  "file": ".git/objects/dc/7588503bf278ee5f8d887691c1ee824074a05b",
+                  "name": "7588503bf278ee5f8d887691c1ee824074a05b"
+                }
+              ]
+            },
+            {
+              "name": "ec",
+              "children": [
+                {
+                  "value": "2",
+                  "file": ".git/objects/ec/07946976ad1e34f3da9f59af5e59aff37558ba",
+                  "name": "07946976ad1e34f3da9f59af5e59aff37558ba"
+                }
+              ]
+            },
+            {
+              "name": "99",
+              "children": [
+                {
+                  "value": "1",
+                  "file": ".git/objects/99/bbb9c4d4a16ff3ffe5e2805c6c3bf2ee955867",
+                  "name": "bbb9c4d4a16ff3ffe5e2805c6c3bf2ee955867"
+                }
+              ]
+            },
+            {
+              "name": "64",
+              "children": [
+                {
+                  "value": "0",
+                  "file": ".git/objects/64/86958df085d6ecef72e9ee47b0491c11962731",
+                  "name": "86958df085d6ecef72e9ee47b0491c11962731"
+                }
+              ]
+            },
+            {
+              "name": "8d",
+              "children": [
+                {
+                  "value": "0",
+                  "file": ".git/objects/8d/6c89030ecdbd1c847cc2be30977ab997aa5e56",
+                  "name": "6c89030ecdbd1c847cc2be30977ab997aa5e56"
+                }
+              ]
+            },
+            {
+              "name": "a8",
+              "children": [
+                {
+                  "value": "1",
+                  "file": ".git/objects/a8/9fad9ca2754f9b812c39796681b4e75519121b",
+                  "name": "9fad9ca2754f9b812c39796681b4e75519121b"
+                }
+              ]
+            },
+            {
+              "name": "5b",
+              "children": [
+                {
+                  "value": "1",
+                  "file": ".git/objects/5b/4c98219e03be1440c8bccf6943c06ab5a6f436",
+                  "name": "4c98219e03be1440c8bccf6943c06ab5a6f436"
+                }
+              ]
+            },
+            {
+              "name": "5a",
+              "children": [
+                {
+                  "value": "6",
+                  "file": ".git/objects/5a/239a4bf01cd3067108565ecd4921569f615790",
+                  "name": "239a4bf01cd3067108565ecd4921569f615790"
+                }
+              ]
+            },
+            {
+              "name": "e0",
+              "children": [
+                {
+                  "value": "1",
+                  "file": ".git/objects/e0/90003825d30f19f99584da81300084192176ae",
+                  "name": "90003825d30f19f99584da81300084192176ae"
+                }
+              ]
+            },
+            {
+              "name": "78",
+              "children": [
+                {
+                  "value": "0",
+                  "file": ".git/objects/78/5185ca8ea05acb3140d6f2b49d8348fdd6446b",
+                  "name": "5185ca8ea05acb3140d6f2b49d8348fdd6446b"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "value": "5",
+          "file": ".git/config",
+          "name": "config"
+        }
+      ]
+    },
+    {
+      "value": "0",
+      "file": "data.json",
+      "name": "data.json"
+    },
+    {
+      "value": "18",
+      "file": "README.md",
+      "name": "README.md"
+    }
+  ]
+}
